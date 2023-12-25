@@ -1,7 +1,7 @@
 {
   "name": "fcc-learn-npm-package-json",
   "author": "Kelly",
-  "description": "Managing Packages with NPM",
+  "description": "A starter project created to practice NPM concepts (Node Package Manager)",
   "keywords": [
     "freecodecamp",
     "node package manager",
