@@ -1,6 +1,6 @@
 let express = require("express");
-let bodyParser = require("body-parser");
 let app = express();
+let bodyParser = require("body-parser");
 
 // 11) Use body-parser to Parse POST Requests
 app.use(bodyParser.urlencoded({ extended: false }));
