@@ -7,7 +7,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// 1) Meet the Node Console.
+// 1) Meet the Node Console
 console.log("Hello World");
 
 /*************************************
