@@ -7,7 +7,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// 1) Meet the Node Console.
+// 1) Meet the Node Console
 console.log("Hello World");
 
 /*************************************
@@ -47,15 +47,16 @@ app.get("/json", (req, res) => {
 /* IMPLEMENT IT BEFORE ALL THE ROUTES */
 
 // 8) Chain Middleware to Create a Time Server
-app.get("/now", (req, res, next) => {
+app.get(
+  "/now",
+  (req, res, next) => {
     req.time = new Date().toString();
     next();
   },
-        
+
   (req, res) => {
     res.json({ time: req.time });
   },
 );
 
 module.exports = app;
-
