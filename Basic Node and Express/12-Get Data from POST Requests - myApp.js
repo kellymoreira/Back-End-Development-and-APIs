@@ -12,7 +12,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// 1) Meet the Node Console.
+// 1) Meet the Node Console
 console.log("Hello World");
 
 /*************************************
@@ -70,10 +70,12 @@ app.get("/:word/echo", (req, res) => {
 });
 
 // 10) Get Input from Client - Query Parameters
-app.route("/name").get((req, res) => {
+app
+  .route("/name")
+  .get((req, res) => {
     res.json({ name: `${req.query.first} ${req.query.last}` });
   })
-// 12) Get Data from POST Requests  
+  // 12) Get Data from POST Requests
   .post((req, res) => {
     res.json({ name: `${req.body.first} ${req.body.last}` });
   });
@@ -82,4 +84,3 @@ app.route("/name").get((req, res) => {
 /* IMPLEMENT IT BEFORE ALL THE ROUTES */
 
 module.exports = app;
-
