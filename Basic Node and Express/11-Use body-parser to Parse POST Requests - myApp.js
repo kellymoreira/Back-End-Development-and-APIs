@@ -78,4 +78,3 @@ app.route("/name").get((req, res) => {
 /* IMPLEMENT IT BEFORE ALL THE ROUTES */
 
 module.exports = app;
-
