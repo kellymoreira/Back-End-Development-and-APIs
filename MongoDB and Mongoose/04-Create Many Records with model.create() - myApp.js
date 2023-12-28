@@ -24,7 +24,7 @@ const personSchema = new Schema({
 const Person = mongoose.model("Person", personSchema);
 
 // 3) Create and Save a Record of a Model
-function createAndSavePerson(done) {
+const createAndSavePerson = (done) => {
   const person = new Person({
     name: "Kelly Cristina Moreira",
     age: 19,
@@ -32,7 +32,8 @@ function createAndSavePerson(done) {
   });
 
   person.save((err, data) => (err ? done(null) : done(null, data)));
-}
+};
+
 // 4) Create Many Records People with model.create()
 const createManyPeople = (arrayOfPeople, done) => {
   Person.create(arrayOfPeople, (err, data) =>
@@ -97,3 +98,4 @@ exports.createManyPeople = createManyPeople;
 exports.removeById = removeById;
 exports.removeManyPeople = removeManyPeople;
 exports.queryChain = queryChain;
+
