@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 // 1) Install and Set Up Mongoose
-/** CONNECT TO THE MONGODB ATLAS DATABASE USING THE PROVIDED URI */
+/** CONNECT TO THE MONGODB ATLAS DATABASE USING THE PROVIDED URI **/
 /* MONGO_URI=mongodb+srv://Username:Password@ServerOrCluster/DesiredDatabaseName?AdditionalConnectionOptions */
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
