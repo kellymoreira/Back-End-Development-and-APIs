@@ -1,4 +1,3 @@
-
 const mongoose = require("mongoose");
 require("dotenv").config();
 
@@ -25,7 +24,7 @@ const personSchema = new Schema({
 const Person = mongoose.model("Person", personSchema);
 
 // 3) Create and Save a Record of a Model
-function createAndSavePerson(done) {
+const createAndSavePerson = (done) => {
   const person = new Person({
     name: "Kelly Cristina Moreira",
     age: 19,
@@ -33,7 +32,7 @@ function createAndSavePerson(done) {
   });
 
   person.save((err, data) => (err ? done(null) : done(null, data)));
-}
+};
 
 const createManyPeople = (arrayOfPeople, done) => {
   done(null /*, data*/);
@@ -96,3 +95,4 @@ exports.createManyPeople = createManyPeople;
 exports.removeById = removeById;
 exports.removeManyPeople = removeManyPeople;
 exports.queryChain = queryChain;
+
